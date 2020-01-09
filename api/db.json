@@ -1,0 +1,94 @@
+{
+  "flowers": [
+    {
+      "id": 1,
+      "commonName": "Rose",
+      "color": "red"
+    },
+    {
+      "id": 1,
+      "commonName": "Tulip",
+      "color": "yellow"
+    },
+    {
+      "id": 1,
+      "commonName": "Carnation",
+      "color": "pink"
+    },
+    {
+      "id": 1,
+      "commonName": "Bluebell",
+      "color": "blue"
+    },
+    {
+      "id": 1,
+      "commonName": "Hydrangea",
+      "color": "white"
+    }
+  ],
+  "retailers": [
+    {
+      "id": 1,
+      "name": "Flowers for Days",
+      "city": "Springfield",
+      "state": "IL",
+      "address": "123 ABC Rd",
+      "distributorId": 1
+    },
+    {
+      "id": 2,
+      "name": "Branches and Birch",
+      "city": "Lincoln",
+      "state": "NE",
+      "address": "456 XYZ Rd",
+      "distributorId": 2
+    },
+    {
+      "id": 3,
+      "name": "Petalopolous",
+      "city": "Nashville",
+      "state": "TN",
+      "address": "1662 White Bridge Rd",
+      "distributorId": 3
+    },
+    {
+      "id": 4,
+      "name": "Frankenflower",
+      "city": "Miami",
+      "state": "FL",
+      "address": "15 Waterside Rd",
+      "distributorId": 1
+    },
+    {
+      "id": 5,
+      "name": "Flower Power",
+      "city": "Denver",
+      "state": "CO",
+      "address": "10 Mile High Rd",
+      "distributorId": 2
+    }
+  ],
+  "distributors": [
+    {
+      "id": 1,
+      "name": "Flowers and More",
+      "city": "New York",
+      "state": "NY",
+      "address": "1551 Waterford Rd"
+    },
+    {
+      "id": 2,
+      "name": "Flowers First",
+      "city": "San Fransisco",
+      "state": "CA",
+      "address": "4467 Cliffside Rd"
+    },
+    {
+      "id": 3,
+      "name": "Forever Flowers",
+      "city": "Las Vegas",
+      "state": "NV",
+      "address": "123456 Desert Rd"
+    }
+  ]
+}
