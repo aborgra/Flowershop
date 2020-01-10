@@ -6,22 +6,22 @@
       "color": "red"
     },
     {
-      "id": 1,
+      "id": 2,
       "commonName": "Tulip",
       "color": "yellow"
     },
     {
-      "id": 1,
+      "id": 3,
       "commonName": "Carnation",
       "color": "pink"
     },
     {
-      "id": 1,
+      "id": 4,
       "commonName": "Bluebell",
       "color": "blue"
     },
     {
-      "id": 1,
+      "id": 5,
       "commonName": "Hydrangea",
       "color": "white"
     }
@@ -89,6 +89,111 @@
       "city": "Las Vegas",
       "state": "NV",
       "address": "123456 Desert Rd"
+    }
+  ],
+  "nurseries": [
+    {
+      "id": 1,
+      "name": "Roses are Red"
+    },
+    {
+      "id": 2,
+      "name": "Tulips for You"
+    },
+    {
+      "id": 3,
+      "name": "Carnations for Cabbies"
+    },
+    {
+      "id": 4,
+      "name": "Bluebells all Day"
+    },
+    {
+      "id": 5,
+      "name": "Hydrangea Smydrangea"
+    }
+  ],
+  "nurseryFlower": [
+    {
+      "id": 1,
+      "nurseryId": 1,
+      "flowerId": 1
+    },
+    {
+      "id": 2,
+      "nurseryId": 1,
+      "flowerId": 2
+    },
+    {
+      "id": 3,
+      "nurseryId": 2,
+      "flowerId": 3
+    },
+    {
+      "id": 4,
+      "nurseryId": 2,
+      "flowerId": 4
+    },
+    {
+      "id": 5,
+      "nurseryId": 3,
+      "flowerId": 5
+    },
+    {
+      "id": 6,
+      "nurseryId": 3,
+      "flowerId": 1
+    },
+    {
+      "id": 7,
+      "nurseryId": 4,
+      "flowerId": 2
+    },
+    {
+      "id": 8,
+      "nurseryId": 4,
+      "flowerId": 3
+    },
+    {
+      "id": 9,
+      "nurseryId": 5,
+      "flowerId": 4
+    },
+    {
+      "id": 10,
+      "nurseryId": 5,
+      "flowerId": 5
+    }
+  ],"nurseryDistributor": [
+    {
+      "id": 1,
+      "nurseryId": 1,
+      "distributorId": 1
+    },
+    {
+      "id": 2,
+      "nurseryId": 2,
+      "distributorId": 1    
+    },
+    {
+      "id": 3,
+      "nurseryId": 3,
+      "distributorId": 2    
+    },
+    {
+      "id": 4,
+      "nurseryId": 4,
+      "distributorId": 2
+    },
+    {
+      "id": 5,
+      "nurseryId": 5,
+      "distributorId": 3    
+    },
+    {
+      "id": 1,
+      "nurseryId": 1,
+      "distributorId": 3
     }
   ]
 }
