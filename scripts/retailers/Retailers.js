@@ -18,7 +18,9 @@ const RetailerComponent = (retailer, distributor, foundNurseryArray, flowerArray
           </section>
           <div>Flowers:
           <ul class="flowerRelationship">
-          ${flowerArray.map(flower => flower.map(fl =>`<li>${fl.commonName}</li>`).join("")).join("")}
+          ${flowerArray.map(flower => 
+            flower.map(fl =>
+              `<li>${fl.color} ${fl.commonName}</li>`).join("")).join("")}
           </ul>
           </section>
     </section>
