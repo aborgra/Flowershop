@@ -3,27 +3,27 @@
     {
       "id": 1,
       "commonName": "Rose",
-      "color": "red"
+      "colorId": 1
     },
     {
       "id": 2,
       "commonName": "Tulip",
-      "color": "yellow"
+      "colorId": 2
     },
     {
       "id": 3,
       "commonName": "Carnation",
-      "color": "pink"
+      "colorId": 3
     },
     {
       "id": 4,
       "commonName": "Bluebell",
-      "color": "blue"
+      "colorId": 4
     },
     {
       "id": 5,
       "commonName": "Hydrangea",
-      "color": "white"
+      "colorId": 5
     }
   ],
   "retailers": [
@@ -194,6 +194,28 @@
       "id": 1,
       "nurseryId": 1,
       "distributorId": 3
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "color": "red"
+    },
+    {
+      "id": 2,
+      "color": "yellow"
+    },
+    {
+      "id": 3,
+      "color": "pink"
+    },
+    {
+      "id": 4,
+      "color": "blue"
+    },
+    {
+      "id": 5,
+      "color": "white"
     }
   ]
 }

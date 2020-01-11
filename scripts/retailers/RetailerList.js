@@ -5,6 +5,7 @@ import { useNurseries } from "../nurseries/NurseryProvider.js"
 import { useNurseryFlower } from "../nurseries/NurseryFlowerProvider.js"
 import { useNurseryDistributor } from "../nurseries/NurseryDistributorProvider.js"
 import { useFlowers } from "../flowers/FlowerProvider.js"
+import { useColors } from "../colors/ColorsProvider.js"
 
 
 
@@ -18,6 +19,7 @@ export const RetailerListComponent = () => {
   const nursFlowRel = useNurseryFlower()
   const nursDistRel = useNurseryDistributor()
   const flowers = useFlowers()
+  const colors = useColors()
 
   const render = () => {
     contentTarget.innerHTML = retailers.map(retailer => {
@@ -35,16 +37,31 @@ export const RetailerListComponent = () => {
         return foundNursery
       })
  
+
       // Map over each nursery in the new array containing the associated nurseries with the current retailer
       const flowerArray=foundNurseryArray.map(nursery => {
+
         // For each nurseryFlowerRelationship object from the join table fetch, filter the nurseryFlowerRelationship objects (fk) that match with the current nursery id (pk)
         const nursFlowRelation = nursFlowRel.filter(nf => nf.nurseryId === nursery.id)
-        // 
+
+        // Map over each nurseryFlowerRelation object in the new array
         const foundFlowerArray = nursFlowRelation.map(nfr => {
+
+          // For each nurseryFlowerRelation object, perform a find on the full flowers array from the fetch and compare the flower object id (pk) to the flowerId (fk) on the nurseryFlowerRelation object
           let foundFlower = flowers.find(flower => flower.id === nfr.flowerId)
+          
           return foundFlower
         })
         return foundFlowerArray
+      })
+      const allColorFlowerArrays = []
+      const flowerColorArray = flowerArray.map(flower => {
+        flower.map(fl => {
+        const color = colors.find(color => color.id === fl.colorId)
+        const eachFlowerColorArray = [] 
+        eachFlowerColorArray.push(fl,color)
+        allColorFlowerArrays.push(eachFlowerColorArray)
+      })
       })
 
       
@@ -52,7 +69,7 @@ export const RetailerListComponent = () => {
 
 
       
-     return RetailerComponent(retailer, distributor, foundNurseryArray, flowerArray)}).join("")
+     return RetailerComponent(retailer, distributor, foundNurseryArray, allColorFlowerArrays)}).join("")
   }
 
   render()

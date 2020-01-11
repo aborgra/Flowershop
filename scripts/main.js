@@ -6,11 +6,13 @@ import { getDistributors } from "./distributors/DistributorProvider.js";
 import { getNurseries } from "./nurseries/NurseryProvider.js";
 import { getNurseryDistributor } from "./nurseries/NurseryDistributorProvider.js";
 import { getNurseryFlower } from "./nurseries/NurseryFlowerProvider.js";
+import { getColors } from "./colors/ColorsProvider.js";
 
-getFlowers().then(FlowerListComponent)
+getFlowers()
 getRetailers()
 .then(getDistributors)
 .then(getNurseries)
 .then(getNurseryDistributor)
 .then(getNurseryFlower)
+.then(getColors)
 .then(RetailerListComponent)
