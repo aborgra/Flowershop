@@ -54,12 +54,19 @@ export const RetailerListComponent = () => {
         })
         return foundFlowerArray
       })
+
+
       const allColorFlowerArrays = []
+      // Map over the flowerArray, which contains arrays of the flowers associated with each nursery
       const flowerColorArray = flowerArray.map(flower => {
+        // Map over each flower object in each nursery array
         flower.map(fl => {
+        // Using the colors array from the fetch, find the color object whose id(pk) matches the colorId(fk) on the flower object
         const color = colors.find(color => color.id === fl.colorId)
         const eachFlowerColorArray = [] 
+        // Push each flower and found color to the empty array
         eachFlowerColorArray.push(fl,color)
+        // Push each new array into another empty array (creating an array of arrays where each has a flower object and its associated color object)
         allColorFlowerArrays.push(eachFlowerColorArray)
       })
       })

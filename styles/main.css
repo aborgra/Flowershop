@@ -18,21 +18,7 @@
   display: flex
 }
 
-.customer {
-  flex-basis: 30%;
-  text-align: left;
-  border: 1pt solid black;
-  border-radius: 3pt;
-  margin: 10pt;
-  padding: 5pt
-}
 
-.customers {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  flex-basis: 50%;
-}
 
 .sectionTitle {
   font-weight: bold;
