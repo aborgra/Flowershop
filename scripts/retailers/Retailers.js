@@ -1,4 +1,4 @@
-const RetailerComponent = (retailer, distributor, foundNurseryArray, allColorFlowerArrays) => {
+const RetailerComponent = (retailer, distributor, flowerArray) => {
   return `
     <section class="retailer">
           <header>
@@ -12,18 +12,13 @@ const RetailerComponent = (retailer, distributor, foundNurseryArray, allColorFlo
           <br>
           <div>Distributor: ${distributor.name}</div>
           <br>
-          <div>Nurseries:
-          <ul class="nurseryRelationship">
-          ${foundNurseryArray.map(nursery => `
-          <li>${nursery.name}</li>`).join("")}
-          </ul>
+          <div>Nurseries:</div><br>
+          ${flowerArray.map(nursery => nursery.map(nurs => `
+          ${nurs[0].name}
+          <div> Provides: ${nurs[1].color.color} ${nurs[1].commonName}
+          </div> <br>`).join("")).join("")}
           </section>
-          <div>Flowers:
-          <ul class="flowerRelationship">
-          ${allColorFlowerArrays.map(flower => 
-            
-              `<li>${flower[1].color} ${flower[0].commonName}</li>`).join("")}
-          </ul>
+          
           </section>
     </section>
   `
